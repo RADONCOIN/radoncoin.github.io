@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<title>RadonCOIN Sale</title>
+	<title>RadonCOIN</title>
 	<style type="text/css">
 		html {
   scroll-behavior: smooth;
@@ -18,6 +18,7 @@
   <a href="#" class="w3-bar-item w3-button">Home</a>
   <a href="#Whitepaper" class="w3-bar-item w3-button">Whitepaper</a>
    <a href="#plan" class="w3-bar-item w3-button">20-Phases plan</a>
+   <a href="#buy"class="w3-bar-item w3-button">Buy Now</a>
 </div>
 
 <div class="w3-row">
@@ -211,19 +212,19 @@ With this plan we try to artificially increase the price. The buyer can make mon
 	<br><br>
 	<div class="w3-row">
   <div class="w3-container w3-third">
-    <h2><b>Ether to Radum calculator</b></h2>
+    <h2><b>Ether to Radum calculator:</b></h2>
     <br><br>
 	<form class="w3-container">
 
 	<label>The Ether you send:</label>
-	<input class="w3-input" type="number" min="0.00195" step="0.00001" onchange="RAD()" id="radje">
+	<input class="w3-input w3-dark-grey" type="number" min="0.00195" step="0.00001" onchange="RAD()" id="radje">
 <br>
 	<label>The Radon you receive:</label>
-	<input class="w3-input" type="number" min="10" step="1" onchange="ETHER()" id="ethje">
+	<input class="w3-input w3-dark-grey" type="number" min="10" step="1" onchange="ETHER()" id="ethje">
 	<br>
 	</form>
   </div>
-  <div class="w3-container w3-twothird w3-left">
+  <div class="w3-container w3-twothird w3-left" id="buy">
     <h2><b>Use Ethereum</b></h2>
     <br><br>
     <p>The current Phase is Phase 1, what means that you can buy 1 RAD for 0.00055 ETH. The fee is 0.00140 Ether. </p>
@@ -234,7 +235,7 @@ With this plan we try to artificially increase the price. The buyer can make mon
       <div class="w3-container">
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
         <b class="w3-xlarge">Buying Radum Phase 1.</b>
-        <p>You must be at least 18 years old to start the transaction. You have to buy at least 10 RAD: 0.00055 ETH + 0.00140 ETH (block fee) = 0.00195 ETH, use the calculator on our site. The Ether adress you have to send the Ether to is: 0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f <br><br>
+        <p>You must be at least 18 years old to start the transaction. Use the calculator on our site to find out how much Ether you should send. The adress you have to send the Ether to is: 0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f <br><br>
         Our system processes transactions every 15 hours. </p>
       </div>
     </div>
