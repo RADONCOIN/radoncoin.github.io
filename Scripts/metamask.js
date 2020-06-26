@@ -25,15 +25,6 @@ async function getAccount() {
   const accounts = await ethereum.enable();
   account = accounts[0];
   document.querySelector('.showAccount').innerHTML = account;
-
-  ethereum.on('accountsChanged', function (accounts) {
-	Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Your Ethereum-adress changed!',
-  footer: 'Please reload this page... And try to pay again.'
-})
-});
 }
 
 
