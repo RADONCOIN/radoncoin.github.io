@@ -2,7 +2,7 @@
 <html>
 <head>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	 <script
     src="https://www.paypal.com/sdk/js?client-id=AbRMcLvvrR7MrVvF4BIKeraXcBJz_QpS2ewQrd3MEm7LpNEe9mLb7ceXNQ6ffzGSVOlwt7hLhwIrzjy1">
@@ -12,9 +12,15 @@
 	<title>RadonCOIN</title>
   <script type="text/javascript" src="Scripts/metamask.js"></script>
 	<style type="text/css">
-		html {
+		html, body {
+          -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   scroll-behavior: smooth;
+}
 
+.fixed{
+  position: fixed;
+  z-index: 999;
 }
 
 ::selection {
@@ -23,40 +29,84 @@
 ::-moz-selection {
   background: #db5a6c; /* Gecko Browsers */
 }
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3s steps(30, end),
+    blink-caret 1s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+.imgcollor{
+background-color: #db5a6c;
+}
+
+
+img{
+    -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+
+
+
 	</style>
+
 </head>
 <body onload="bodyload()">
 
 
-	<div class="w3-bar w3-light-grey">
-  <a href="#" class="w3-bar-item w3-button">Home</a>
+	<div class="w3-bar w3-blue-gray fixed">
+  <a href="#home" class="w3-bar-item w3-button">Home</a>
   <a href="#Whitepaper" class="w3-bar-item w3-button">Whitepaper</a>
    <a href="#plan" class="w3-bar-item w3-button">20-Phases plan</a>
    <a href="#howbuy"class="w3-bar-item w3-button">Buy Now</a>
  <a href="#explaincoin"class="w3-bar-item w3-button">Explained</a>
 </div>
-
-<div class="w3-row">
+<br>
+<br>
+<div class="w3-row" id="home">
+  <br>
 	<div class="w3-container w3-half w3-center w3-animate-zoom">
-		  <h2 class="w3-jumbo">RADON</h2>
+    <br>
+    <h2 class="w3-jumbo">RADON</h2>
+		<br>
   <img src="Image/RADONMAINLOGO.jpg" alt="car" style="width:80%;max-width:320px" class="w3-hover-sepia">
-  <p class="w3-xxlarge">Decentralised Cryptocurrency</p>
-  <a href="#explaein" class="w3-xlarge">More Information</a>
+  
+   <div class="typewriter"> 
+    <br>
+  <p class="w3-xxlarge">Decentralised Cryptocurrency</p></div>
+  <br>
+  <a href="#explaincoin" class="w3-xlarge w3-button imgcollor">More Information</a>
 	</div>
 <div class="w3-container w3-half w3-center w3-animate-zoom">
 	<h2 class="w3-jumbo">SALE</h2>
 <ul class="w3-ul w3-xlarge" >
-	  <li><a href="https://etherscan.io/token/0x6adde0a089212c50b8bb2bbe6988e8b082f8e6f5" target="_blank">Etherscan</a></li>
-  <li>Current Phase: 1</li>
-  <li>Current Price: 0.00055 Ether or 0.13$</li>
-  <li><b>Ammount sold:</b>
   <br>
-  122 of 380000
+	  <li>View us on <a href="https://etherscan.io/token/0x6adde0a089212c50b8bb2bbe6988e8b082f8e6f5" target="_blank">Etherscan</a></li>
+ <br> <li>Current Phase: 1</li>
+  <br><li>Current Price: 0.00055 Ether or 0.13$</li>
+ <br> <li><b>Ammount sold:</b>
+  <br>
+  123 of 380000
 	<div class="w3-light-grey">
 	  <div class="w3-grey" style="height:24px;width:1%"></div>
 	</div>
 </li>
-<li><a href="#howbuy" cla>How to buy?</a></li>
+<li><a href="#howbuy">How to buy?</a></li>
 </ul>
 </div>	
 </div>
@@ -64,10 +114,12 @@
 <br>
 <br>
 <br>
+<div class="w3-container w3-blue-gray"><img src="Image/techchainlong.png"  class="w3-image w3-center w3-hover-sepia"></div>
+
 <br>
 <br>
 <br>
-<div class="w3-row">
+<div class="w3-row greenish">
   <div class="w3-container w3-twothird w3-center w3-border-top" >
     <h2 id="plan"><b>20-Phases plan</b></h2>
     <br>
@@ -277,7 +329,7 @@ With this plan we try to artificially increase the price. The buyer can make mon
 <br>
 <br>
 <div class="w3-container w3-border-top w3-center " >
-	<h2 class="w3-xxlarge w3-center" id="howbuy"><b>How to buy?</b></h2>
+	<h2 class="w3-xxlarge w3-center" id="howbuy"><b>Get Radon Now!</b></h2>
 	<br><br>
 	<div class="w3-row ">
 
@@ -419,6 +471,11 @@ With this plan we try to artificially increase the price. The buyer can make mon
   <div class="w3-half w3-container">
    <div class="w3-card-4">
 <script type="text/javascript">
+
+
+
+
+
 	//https://www.youtube.com/watch?v=ZQVweC72qJI
 	var Etherwallet = "";
 
