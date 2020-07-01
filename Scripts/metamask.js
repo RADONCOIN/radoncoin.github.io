@@ -41,6 +41,7 @@ function hideconnectandshow(){
 }
 
 var radonen
+var radonen2
 function paynow(){
 radonen=document.getElementById("radje").innerHTML
 
