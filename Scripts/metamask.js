@@ -49,13 +49,18 @@ console.log(radonen);
 
 
 
-var ammmount = (radonen-0.0014)*1000000000000000000;
+var ammmount = (radonen-0.0014);
+
+var weiValue = web3.utils.toWei(ammmount, 'ether'); 
+console.log("weivalue:"+weiValue);
+
+
 console.log(ammmount)
 web3.eth.sendTransaction({
        from: account,
     to: '0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f',
      gasPrice: '20000000000',
-    value: ammmount.toFixed(5)
+    value: weiValue
 }, function(error, hash){
 
 	console.log(error)
