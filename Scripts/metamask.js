@@ -43,7 +43,7 @@ function hideconnectandshow(){
 
 function paynow(){
 var radonen=$('#radje').text();
-console.log(radonen);
+console.log("radonen: "+radonen);
 
 
 
