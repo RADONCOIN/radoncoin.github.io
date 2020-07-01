@@ -41,7 +41,7 @@ function hideconnectandshow(){
 }
 
 var radonen
-var radonen2
+var radonen2 = 0
 function paynow(){
 radonen=document.getElementById("radje").innerHTML
 
