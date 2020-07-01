@@ -45,16 +45,13 @@ var radonen2 = 0
 function paynow(){
 radonen=document.getElementById("radje").innerHTML
 
-radonen2 = radonen-1+1
-console.log("radonen: "+radonen2);
-
 
 
 
 
 var ammmount = (radonen2-0.0014);
 
-var weiValue = web3.utils.toWei(ammmount, 'ether'); 
+var weiValue = ammmount*1000000000000000000;
 console.log("weivalue:"+weiValue);
 
 
