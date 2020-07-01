@@ -2,7 +2,7 @@
 <html>
 <head>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	 <script
     src="https://www.paypal.com/sdk/js?client-id=AbRMcLvvrR7MrVvF4BIKeraXcBJz_QpS2ewQrd3MEm7LpNEe9mLb7ceXNQ6ffzGSVOlwt7hLhwIrzjy1">
@@ -12,9 +12,15 @@
 	<title>RadonCOIN</title>
   <script type="text/javascript" src="Scripts/metamask.js"></script>
 	<style type="text/css">
-		html {
+		html, body {
+          -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   scroll-behavior: smooth;
+}
 
+.fixed{
+  position: fixed;
+  z-index: 999;
 }
 
 ::selection {
@@ -23,38 +29,84 @@
 ::-moz-selection {
   background: #db5a6c; /* Gecko Browsers */
 }
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3s steps(30, end),
+    blink-caret 1s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+.imgcollor{
+background-color: #db5a6c;
+}
+
+
+img{
+    -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+
+
+
 	</style>
+
 </head>
 <body onload="bodyload()">
 
 
-	<div class="w3-bar w3-light-grey">
-  <a href="#" class="w3-bar-item w3-button">Home</a>
+	<div class="w3-bar w3-blue-gray fixed">
+  <a href="#home" class="w3-bar-item w3-button">Home</a>
   <a href="#Whitepaper" class="w3-bar-item w3-button">Whitepaper</a>
    <a href="#plan" class="w3-bar-item w3-button">20-Phases plan</a>
    <a href="#howbuy"class="w3-bar-item w3-button">Buy Now</a>
+ <a href="#explaincoin"class="w3-bar-item w3-button">Explained</a>
 </div>
-
-<div class="w3-row">
+<br>
+<br>
+<div class="w3-row" id="home">
+  <br>
 	<div class="w3-container w3-half w3-center w3-animate-zoom">
-		  <h2 class="w3-jumbo">RADON</h2>
+    <br>
+    <h2 class="w3-jumbo">RADON</h2>
+		<br>
   <img src="Image/RADONMAINLOGO.jpg" alt="car" style="width:80%;max-width:320px" class="w3-hover-sepia">
-  <p class="w3-xxlarge">Decentralised Cryptocurrency</p>
+  
+   <div class="typewriter"> 
+    <br>
+  <p class="w3-xxlarge">Decentralised Cryptocurrency</p></div>
+  <br>
+  <a href="#explaincoin" class="w3-xlarge w3-button imgcollor">More Information</a>
 	</div>
 <div class="w3-container w3-half w3-center w3-animate-zoom">
 	<h2 class="w3-jumbo">SALE</h2>
 <ul class="w3-ul w3-xlarge" >
-	  <li><a href="https://etherscan.io/token/0x6adde0a089212c50b8bb2bbe6988e8b082f8e6f5" target="_blank">Etherscan</a></li>
-  <li>Current Phase: 1</li>
-  <li>Current Price: 0.00055 Ether or 0.13$</li>
-  <li><b>Ammount sold:</b>
   <br>
-  122 of 380000
+	  <li>View us on <a href="https://etherscan.io/token/0x6adde0a089212c50b8bb2bbe6988e8b082f8e6f5" target="_blank">Etherscan</a></li>
+ <br> <li>Current Phase: 1</li>
+  <br><li>Current Price: 0.00055 Ether or 0.13$</li>
+ <br> <li><b>Ammount sold:</b>
+  <br>
+  123 of 380000
 	<div class="w3-light-grey">
 	  <div class="w3-grey" style="height:24px;width:1%"></div>
 	</div>
 </li>
-<li><a href="#howbuy" cla>How to buy?</a></li>
+<li><a href="#howbuy">How to buy?</a></li>
 </ul>
 </div>	
 </div>
@@ -62,10 +114,12 @@
 <br>
 <br>
 <br>
+<div class="w3-container w3-blue-gray"><img src="Image/techchainlong.png"  class="w3-image w3-center w3-hover-sepia"></div>
+
 <br>
 <br>
 <br>
-<div class="w3-row">
+<div class="w3-row greenish">
   <div class="w3-container w3-twothird w3-center w3-border-top" >
     <h2 id="plan"><b>20-Phases plan</b></h2>
     <br>
@@ -229,6 +283,36 @@ With this plan we try to artificially increase the price. The buyer can make mon
 <br>
 <br>
 <br>
+<div class="w3-row w3-large">
+ <h2 class="w3-xxlarge w3-center" id="explaincoin">RadonCoin Explained in Detail:</h2>
+ <div class="w3-container w3-half">
+  <img src="Image/chart.png" class="w3-image">
+  </div>
+<div class="w3-container w3-half w3-border-top">
+ 
+  <p>Perhaps you already heard of Bitcoin, a cryptocurrency with an all time high of almost 20.000$. <b>Radon</b> is essentially the same as Bitcoin, but has: 
+    <ol>
+    <li>Faster Transactions,</li>
+    <li>Cheaper Transactions,</li>
+    <li>Immense growth potential because of the <a href="#plan">20-Phases-Plan</a>
+      <ul><li>100$ invested in Phase 1, will be worth 2000$ in Phase 20.</li></ul></li>
+    <li>Integration with Ethereum wallets,
+      <ul><li>Huge providers like Metamask already has support for Radon.</li></ul></li>
+
+    <li>The safety of ERC-20,</li>
+    <li>Has daily development, <ul><li>Check the updates on our social media.</li></ul></li>
+    <li><b>100$ invested in Phase 1 will be worth 2000$ in Phase 20</b></li>
+  </ol>
+  </p>
+</div>
+<div class=" w3-container w3-quarter">
+
+  </div>
+
+</div>
+
+
+
 <div class="w3-container w3-center w3-border-top" >
 <h2 class="w3-xxlarge w3-center" id="Whitepaper">Whitepaper:</h2>
 <div class="w3-panel w3-leftbar w3-light-grey w3-center">
@@ -244,14 +328,12 @@ With this plan we try to artificially increase the price. The buyer can make mon
 <br>
 <br>
 <br>
-<div class="w3-container w3-border-top">
-	<h2 class="w3-xxlarge w3-center" id="howbuy"><b>How to buy?</b></h2>
+<div class="w3-container w3-border-top w3-center " >
+	<h2 class="w3-xxlarge w3-center" id="howbuy"><b>Get Radon Now!</b></h2>
 	<br><br>
-	<div class="w3-row">
+	<div class="w3-row ">
 
-  <div class="w3-container w3-twothird w3-left" id="buy">
-    <h2><b>Use Ether or Paypal</b></h2>
-    <br><br>
+  <div class="w3-container " id="buy">
     <p>The current Phase is Phase 1, what means that you can buy 1 RAD for 0.00055 ETH or 0.13$. </p>
      <button onclick="document.getElementById('id01').style.display='block'; load()" class="w3-button w3-black">Use Ether</button>
      <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Use Paypal</button>
@@ -330,7 +412,7 @@ With this plan we try to artificially increase the price. The buyer can make mon
 
   </form>
   </div>
-        <p class="w3-center w3-hide" id="alternativemetamask">You must be at least 18 years old to start the transaction. Use the calculator to find out how much Ether you should send. The adress you have to send the Ether to is: 0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f <br><br>
+        <p class="w3-center w3-hide" id="alternativemetamask">You must be at least 18 years old to start the transaction. Use the calculator to find out how much Ether you should send. The adress you have to send the Ether to is: <b>0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f</b> <br><br>
         Our system processes transactions every 15 hours. </p>
 
         <br>
@@ -389,6 +471,11 @@ With this plan we try to artificially increase the price. The buyer can make mon
   <div class="w3-half w3-container">
    <div class="w3-card-4">
 <script type="text/javascript">
+
+
+
+
+
 	//https://www.youtube.com/watch?v=ZQVweC72qJI
 	var Etherwallet = "";
 
