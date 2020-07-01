@@ -40,9 +40,9 @@ function hideconnectandshow(){
 		$("#alternativemetamask").removeClass("w3-hide");
 }
 
-
+var radonen
 function paynow(){
-var radonen=$('#radje').text();
+radonen=$('#radje').text();
 console.log("radonen: "+radonen);
 
 
