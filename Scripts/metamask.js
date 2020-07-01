@@ -45,7 +45,7 @@ var radonen2
 function paynow(){
 radonen=document.getElementById("radje").innerHTML
 
-radonen2 = parseFloat(radonen)
+radonen2 = radonen-1+1
 console.log("radonen: "+radonen2);
 
 
