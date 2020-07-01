@@ -43,13 +43,15 @@ function hideconnectandshow(){
 var radonen
 function paynow(){
 radonen=document.getElementById("radje").innerHTML
-console.log("radonen: "+radonen);
+
+radonen2 = parseFloat(radonen)
+console.log("radonen: "+radonen2);
 
 
 
 
 
-var ammmount = (radonen-0.0014);
+var ammmount = (radonen2-0.0014);
 
 var weiValue = web3.utils.toWei(ammmount, 'ether'); 
 console.log("weivalue:"+weiValue);
