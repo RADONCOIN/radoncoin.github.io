@@ -42,7 +42,7 @@ function hideconnectandshow(){
 
 
 function paynow(){
-var radonen=document.getElementById("radje").value;
+var radonen=$('#radje').text();
 console.log(radonen);
 
 
