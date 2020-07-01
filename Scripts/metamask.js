@@ -42,7 +42,17 @@ function hideconnectandshow(){
 
 
 function paynow(){
-var ammmount = (bleg-0.0014)*1000000000000000000;
+var radonen=document.getElementById("ethje").value;
+var ethernen = (radonen*0.00055);
+    bleger = (ethernen+0.0014)
+ammmountr =  bleger.toFixed(5)
+console.log(ammmountr)
+
+
+
+
+
+var ammmount = (bleger-0.0014)*1000000000000000000;
 
 web3.eth.sendTransaction({
        from: account,
