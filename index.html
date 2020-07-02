@@ -84,6 +84,57 @@ img{
 
 }
 
+.spin{
+  -webkit-animation-name: spin;
+    -webkit-animation-duration: 60000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: spin;
+    -moz-animation-duration: 60000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    -ms-animation-name: spin;
+    -ms-animation-duration: 60000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 60000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+    @-ms-keyframes spin { 
+        from { 
+            -ms-transform: rotate(0deg); 
+        } to { 
+            -ms-transform: rotate(360deg); 
+        }
+    }
+    @-moz-keyframes spin { 
+        from { 
+            -moz-transform: rotate(0deg); 
+        } to { 
+            -moz-transform: rotate(360deg); 
+        }
+    }
+    @-webkit-keyframes spin { 
+        from { 
+            -webkit-transform: rotate(0deg); 
+        } to { 
+            -webkit-transform: rotate(360deg); 
+        }
+    }
+    @keyframes spin { 
+        from { 
+            transform: rotate(0deg); 
+        } to { 
+            transform: rotate(360deg); 
+        }
+    }
+
+}
 
 
 
@@ -112,6 +163,9 @@ img{
 
 
 </div>
+
+
+
 <br>
 <br>
 <div class="w3-row background1" id="home">
@@ -131,6 +185,16 @@ img{
   <br>
   <br>
 	</div>
+
+
+    <div class="w3-container w3-half w3-center w3-animate-zoom ">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+   <img src="Image/wheel.png" alt="car" style="max-width:180%" class="w3-image w3-center  w3-margin-top rounded  spin">
+  </div>
 <!-- <div class="w3-container w3-half w3-center w3-animate-zoom">
 	<h2 class="w3-jumbo">SALE</h2>
 <ul class="w3-ul w3-xlarge" >
