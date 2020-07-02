@@ -30,7 +30,7 @@
   background: #db5a6c; /* Gecko Browsers */
 }
 .typewriter p {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  o/* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -40,10 +40,7 @@
 }
 
 /* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
+
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
@@ -61,38 +58,80 @@ img{
 }
 
 
+.background1{
+  background-image: url('Image/background.png');
+  background-color: blue;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.rounded{
+  border-radius: 25px;
+}
+.white{
+  color: white;
+}
+
+.red{
+ color: #db5a6c;
+}
+
+.bordercolor{
+  border-color: black;
+
+}
+
+
 
 
 	</style>
 
+
 </head>
-<body onload="bodyload()">
+<body onload="bodyload()" class="">
 
 
-	<div class="w3-bar w3-blue-gray fixed">
-  <a href="#home" class="w3-bar-item w3-button">Home</a>
-  <a href="#Whitepaper" class="w3-bar-item w3-button">Whitepaper</a>
-   <a href="#plan" class="w3-bar-item w3-button">20-Phases plan</a>
-   <a href="#howbuy"class="w3-bar-item w3-button">Buy Now</a>
- <a href="#explaincoin"class="w3-bar-item w3-button">Explained</a>
+<div class="w3-bar w3-white fixed">
+
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-white">Home</button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4 fixed">
+
+    <a href="#plan" class="w3-bar-item w3-button">20-Phases plan</a>
+
+    <a href="#Whitepaper" class="w3-bar-item w3-button">Whitepaper</a>
+  
+    <a href="#howbuy" class="w3-bar-item w3-button">Buy Now</a>
+
+    </div>
+  </div>
+   <a href="Information/contact.html" class="w3-button">Contact</a>
+
+
 </div>
 <br>
 <br>
-<div class="w3-row" id="home">
+<div class="w3-row background1" id="home">
   <br>
 	<div class="w3-container w3-half w3-center w3-animate-zoom">
     <br>
-    <h2 class="w3-jumbo">RADON</h2>
+    
 		<br>
-  <img src="Image/RADONMAINLOGO.jpg" alt="car" style="width:80%;max-width:320px" class="w3-hover-sepia">
+  <img src="Image/RADONMAINLOGO.jpg" alt="car" style="width:80%;max-width:320px" class="w3-hover-sepia rounded">
   
-   <div class="typewriter"> 
-    <br>
-  <p class="w3-xxlarge">Decentralised Cryptocurrency</p></div>
+   <div class="w3-responsive"> 
+    
+    <h2 class="w3-xlarge white"><b><i>RADON© - Phase 1</i></b></h2>
+  <p class="w3-xxlarge white">Decentralised Cryptocurrency</p></div>
+  <a href="#explaincoin" class="bordercolor w3-xlarge w3-button imgcollor white w3-border rounded bordercolor">More Information</a>
   <br>
-  <a href="#explaincoin" class="w3-xlarge w3-button imgcollor">More Information</a>
+  <br>
+  <br>
 	</div>
-<div class="w3-container w3-half w3-center w3-animate-zoom">
+<!-- <div class="w3-container w3-half w3-center w3-animate-zoom">
 	<h2 class="w3-jumbo">SALE</h2>
 <ul class="w3-ul w3-xlarge" >
   <br>
@@ -108,17 +147,11 @@ img{
 </li>
 <li><a href="#howbuy">How to buy?</a></li>
 </ul>
-</div>	
+</div>	 -->
 </div>
-
 <br>
-<br>
-<br>
-<div class="w3-container w3-blue-gray"><img src="Image/techchainlong.png"  class="w3-image w3-center w3-hover-sepia"></div>
-
-<br>
-<br>
-<br>
+<!-- <div class="w3-container w3-blue-gray"><img src="Image/techchainlong.png"  class="w3-image w3-center w3-hover-sepia"></div>
+ -->
 <div class="w3-row greenish">
   <div class="w3-container w3-twothird w3-center w3-border-top" >
     <h2 id="plan"><b>20-Phases plan</b></h2>
@@ -301,7 +334,6 @@ With this plan we try to artificially increase the price. The buyer can make mon
 
     <li>The safety of ERC-20,</li>
     <li>Has daily development, <ul><li>Check the updates on our social media.</li></ul></li>
-    <li><b>100$ invested in Phase 1 will be worth 2000$ in Phase 20</b></li>
   </ol>
   </p>
 </div>
