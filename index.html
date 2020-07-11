@@ -9,90 +9,69 @@
   </script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="Style/main.css">
 	<title>RadonCOIN</title>
   <script type="text/javascript" src="Scripts/metamask.js"></script>
-	<style type="text/css">
-		html, body {
-          -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  scroll-behavior: smooth;
-}
 
-.fixed{
-  position: fixed;
-  z-index: 999;
-}
-
-::selection {
-  background: #db5a6c; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #db5a6c; /* Gecko Browsers */
-}
-.typewriter p {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
-    typing 3s steps(30, end),
-    blink-caret 1s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black }
-}
-.imgcollor{
-background-color: #db5a6c;
-}
-
-
-img{
-    -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-
-
-
-	</style>
 
 </head>
-<body onload="bodyload()">
+<body onload="bodyload()" class="">
 
 
-	<div class="w3-bar w3-blue-gray fixed">
-  <a href="#home" class="w3-bar-item w3-button">Home</a>
-  <a href="#Whitepaper" class="w3-bar-item w3-button">Whitepaper</a>
-   <a href="#plan" class="w3-bar-item w3-button">20-Phases plan</a>
-   <a href="#howbuy"class="w3-bar-item w3-button">Buy Now</a>
- <a href="#explaincoin"class="w3-bar-item w3-button">Explained</a>
+<div class="w3-bar w3-white fixed w3-padding-16">
+
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-white">Home</button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4 fixed">
+
+    <a href="#plan" class="w3-bar-item w3-button">20-Phases plan</a>
+
+    <a href="#Whitepaper" class="w3-bar-item w3-button">Whitepaper</a>
+  
+    <a href="#howbuy" class="w3-bar-item w3-button">Buy Now</a>
+
+    </div>
+  </div>
+   <a href="Information/sale.html" class="w3-button w3-right bordercolor w3-button imgcollor white w3-border rounded bordercolor">RADON SALE</a>
+
+
 </div>
+
+
+
 <br>
 <br>
-<div class="w3-row" id="home">
+<div class="w3-row background1" id="home">
   <br>
 	<div class="w3-container w3-half w3-center w3-animate-zoom">
     <br>
-    <h2 class="w3-jumbo">RADON</h2>
+    
 		<br>
-  <img src="Image/RADONMAINLOGO.jpg" alt="car" style="width:80%;max-width:320px" class="w3-hover-sepia">
+  <img src="Image/RADONMAINLOGO.jpg" alt="car" style="width:80%;max-width:320px" class="w3-hover-sepia rounded">
   
-   <div class="typewriter"> 
-    <br>
-  <p class="w3-xxlarge">Decentralised Cryptocurrency</p></div>
+   <div class="w3-responsive"> 
+    
+    <h2 class="w3-xlarge white"><b><i>RADON© - Phase 1</i></b></h2>
+  <p class="w3-xxlarge white">Decentralised Cryptocurrency</p></div>
+  <a href="#explaincoin" class="bordercolor w3-xlarge w3-button imgcollor white w3-border rounded bordercolor">More Information</a>
   <br>
-  <a href="#explaincoin" class="w3-xlarge w3-button imgcollor">More Information</a>
+  <br>
+  <br>
 	</div>
-<div class="w3-container w3-half w3-center w3-animate-zoom">
+
+
+    <div class="w3-container w3-half w3-center w3-animate-zoom ">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+   <img src="Image/wheel.png" alt="car" style="max-width:180%" class="w3-image w3-center  w3-margin-top rounded  spin">
+  </div>
+<!-- <div class="w3-container w3-half w3-center w3-animate-zoom">
 	<h2 class="w3-jumbo">SALE</h2>
 <ul class="w3-ul w3-xlarge" >
   <br>
@@ -108,19 +87,15 @@ img{
 </li>
 <li><a href="#howbuy">How to buy?</a></li>
 </ul>
-</div>	
+</div>	 -->
+
+<img src="Image/cloud.png" class="w3-image">
 </div>
-
 <br>
-<br>
-<br>
-<div class="w3-container w3-blue-gray"><img src="Image/techchainlong.png"  class="w3-image w3-center w3-hover-sepia"></div>
-
-<br>
-<br>
-<br>
+<!-- <div class="w3-container w3-blue-gray"><img src="Image/techchainlong.png"  class="w3-image w3-center w3-hover-sepia"></div>
+ -->
 <div class="w3-row greenish">
-  <div class="w3-container w3-twothird w3-center w3-border-top" >
+  <div class="w3-container w3-twothird w3-center" >
     <h2 id="plan"><b>20-Phases plan</b></h2>
     <br>
      <table class="w3-table w3-striped w3-animate-left">
@@ -301,7 +276,6 @@ With this plan we try to artificially increase the price. The buyer can make mon
 
     <li>The safety of ERC-20,</li>
     <li>Has daily development, <ul><li>Check the updates on our social media.</li></ul></li>
-    <li><b>100$ invested in Phase 1 will be worth 2000$ in Phase 20</b></li>
   </ol>
   </p>
 </div>
@@ -328,110 +302,7 @@ With this plan we try to artificially increase the price. The buyer can make mon
 <br>
 <br>
 <br>
-<div class="w3-container w3-border-top w3-center " >
-	<h2 class="w3-xxlarge w3-center" id="howbuy"><b>Get Radon Now!</b></h2>
-	<br><br>
-	<div class="w3-row ">
 
-  <div class="w3-container " id="buy">
-    <p>The current Phase is Phase 1, what means that you can buy 1 RAD for 0.00055 ETH or 0.13$. </p>
-     <button onclick="document.getElementById('id01').style.display='block'; load()" class="w3-button w3-black">Use Ether</button>
-     <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Use Paypal</button>
-     
-
-
-
-
-<!--  Paypal    
- -->  <div id="id02" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-        <b class="w3-xlarge">Buying Radon Phase 1. Paypal</b>
-        <br>
-          <div class="w3-container w3-third">
-  </div>
-  <br>
-  <h2><b>USD to Radon calculator:</b></h2>
-    <br><br>
-	<form class="w3-container">
-<label>How much Radon do you want to buy:</label>
-	<input class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="ETHER2()" id="ethje2">
-	<br>
-	<label>The USD you send:</label>
-	<p class="w3-input w3-black" id="radje2">Price in USD</p>
-<br>
-<label>Your Ether/ERC-20 Token Adress:</label>
-	<input class="w3-input w3-black" placeholder="0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f" type="text" onchange="getEtherwallet()" id="Etherwallet">
-	
-	</form>
-        <p class="w3-center">You must be at least 18 years old to start the transaction. Use the calculator to see the price in USD. Paypal has a fee of 0.35$ for each transaction. <br><br>
-        Our system processes transactions every 15 hours. </p>
-        <br><br>
-
-
-          <div id="paypal-button-container" class="w3-center"></div>
-
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Ether -->
-
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-        <b class="w3-xlarge">Buying Radon Phase 1. Ether</b>
-        <br>
-          
-  <br><div class="w3-container">
-    <h2><b>Payment calculator:</b></h2>
-    <br><br>
-  <form class="w3-container">
-  <label>The Radon you receive:</label>
-  <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="0"onchange="ETHER()" id="ethje">
-  <br>
-  <label>The Ether you send (including blockchain fee):</label>
-  <p class="w3-input w3-black"id="radje">0</p>
-<br>
-
-  </form>
-  </div>
-        <p class="w3-center w3-hide" id="alternativemetamask">You must be at least 18 years old to start the transaction. Use the calculator to find out how much Ether you should send. The adress you have to send the Ether to is: <b>0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f</b> <br><br>
-        Our system processes transactions every 15 hours. </p>
-
-        <br>
-        <div class="w3-container w3-center w3-hide" id="metaMask">
-          <b><p id="askmeta" class="w3-red">You have a web3-provider installed, do you wish to connect for easier payments?</p>
-            <button onclick="connect()" class="w3-btn w3-black" id="yesbtn">Yes</button><button class="w3-btn w3-black" id="nobtn" onclick="hideconnectandshow()">No</button></b>
-            <button class="w3-btn w3-black" id="paynoweth" onclick="paynow()">Pay Now</button>
-            <h2 id="youracc" class="w3-hide">Your Connected Account: <span class="showAccount"></span></h2>
-
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-
-</div>
 <br>
 <br>
 <br>

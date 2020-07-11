@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../Scripts/tronlink.js"></script>
+<script src="../Scripts/metamask.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	 <script
+    src="https://www.paypal.com/sdk/js?client-id=AbRMcLvvrR7MrVvF4BIKeraXcBJz_QpS2ewQrd3MEm7LpNEe9mLb7ceXNQ6ffzGSVOlwt7hLhwIrzjy1">
+  </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+	<title>Token Sale - RADON</title>
+	<link rel="stylesheet" type="text/css" href="../Style/main.css">
+</head>
+<body onload="bodyload()">
+
+<div class="w3-bar w3-white fixed w3-padding-16">
+     <a href="../index.html"class="w3-button w3-white">Home</a>
+   <a href="#" class="w3-button w3-right bordercolor w3-button imgcollor white w3-border rounded bordercolor">RADON SALE</a>
+
+
+</div>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="w3-container w3-border-top  " >
+  <h2 class="w3-xxlarge w3-center" id="howbuy"><b>Get Radon Now!</b></h2>
+  <br><br>
+  <div class="w3-row ">
+
+  <div class="w3-container " id="buy">
+    <p>The current Phase is Phase 1, what means that you can buy 1 RAD for 0.00055 ETH or 0.13$. </p>
+     <button onclick="document.getElementById('id01').style.display='block'; load()" class="w3-button w3-black">Use Ether</button>
+     <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Use Paypal</button>
+      <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-black w3-hide">Use Tron</button>
+
+
+<!-- TRON -->
+ <div id="id03" class="w3-modal w3-hide">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id03').style.display='none'; Tronload()" class="w3-button w3-display-topright">&times;</span>
+        <b class="w3-xlarge">Buying Radon Phase 1. Tron</b>
+        <br>
+
+  <br>
+  <h2><b>Tron to Radon calculator:</b></h2>
+    <br><br>
+  <form class="w3-container">
+<label>How much Radon do you want to buy:</label>
+  <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="TronToEther()" id="tronEther">
+  <br>
+  <label>The Tron you send: (including 0.25$ fee)</label>
+  <p class="w3-input w3-black" id="Tron">Price in Tron</p>
+<br> 
+  </form>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJlOSmf5RCZmvlys3XqJIzBhO0srAqq11pvHVr4uwabOp4uw/viewform?embedded=true" width="640" height="574" frameborder="0" marginheight="0" marginwidth="0" class="w3-center">Loading…</iframe>
+
+
+        <p class="w3-center">You must be at least 18 years old to start the transaction. Use the calculator to see the price in USD. Paypal has a fee of 0.35$ for each transaction. <br><br>
+        Our system processes transactions every 15 hours. </p>
+        <br><br>
+             <div class="w3-container w3-center w3-hide" id="TronLink">
+          <b><p id="askmeta" class="w3-red">You have a Tron-Provider installed, do you wish to connect for easier payments?</p>
+            <button onclick="connectTron()" class="w3-btn w3-hide w3-black" id="tronButtonYes">Yes</button>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+<!--  Paypal    
+ -->  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <b class="w3-xlarge">Buying Radon Phase 1. Paypal</b>
+        <br>
+          <div class="w3-container w3-third">
+  </div>
+  <br>
+  <h2><b>USD to Radon calculator:</b></h2>
+    <br><br>
+  <form class="w3-container">
+<label>How much Radon do you want to buy:</label>
+  <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="ETHER2()" id="ethje2">
+  <br>
+  <label>The USD you send:</label>
+  <p class="w3-input w3-black" id="radje2">Price in USD</p>
+<br>
+<label>Your Ether/ERC-20 Token Adress:</label>
+  <input class="w3-input w3-black" placeholder="0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f" type="text" onchange="getEtherwallet()" id="Etherwallet">
+  
+  </form>
+        <p class="w3-center">You must be at least 18 years old to start the transaction. Use the calculator to see the price in USD. Paypal has a fee of 0.35$ for each transaction. <br><br>
+        Our system processes transactions every 15 hours. </p>
+        <br><br>
+
+
+          <div id="paypal-button-container" class="w3-center"></div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Ether -->
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <b class="w3-xlarge">Buying Radon Phase 1. Ether</b>
+        <br>
+          
+  <br><div class="w3-container">
+    <h2><b>Payment calculator:</b></h2>
+    <br><br>
+  <form class="w3-container">
+  <label>The Radon you receive:</label>
+  <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="0"onchange="ETHER()" id="ethje">
+  <br>
+  <label>The Ether you send (including blockchain fee):</label>
+  <p class="w3-input w3-black"id="radje">0</p>
+<br>
+
+  </form>
+  </div>
+        <p class="w3-center w3-hide" id="alternativemetamask">You must be at least 18 years old to start the transaction. Use the calculator to find out how much Ether you should send. The adress you have to send the Ether to is: <b>0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f</b> <br><br>
+        Our system processes transactions every 15 hours. </p>
+
+        <br>
+        <div class="w3-container w3-center w3-hide" id="metaMask">
+          <b><p id="askmeta" class="w3-red">You have a web3-provider installed, do you wish to connect for easier payments?</p>
+            <button onclick="connect()" class="w3-btn w3-black" id="yesbtn">Yes</button><button class="w3-btn w3-black" id="nobtn" onclick="hideconnectandshow()">No</button></b>
+            <button class="w3-btn w3-black" id="paynoweth" onclick="paynow()">Pay Now</button>
+            <h2 id="youracc" class="w3-hide">Your Connected Account: <span class="showAccount"></span></h2>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+  //https://www.youtube.com/watch?v=ZQVweC72qJI
+  var Etherwallet = "";
+
+  function RAD(){
+
+    var Ether = document.getElementById("radje").value;
+    Ether=Ether-0.0014
+
+    if(Ether<0.00055){
+      Ether=0
+    }
+    var Radon = (Ether/0.00055);
+    document.getElementById("ethje").value = Math.floor(Radon);
+  }
+  var bleg;
+  function ETHER(){
+    var radon=document.getElementById("ethje").value;
+    var ether = (radon*0.00055);
+    bleg = (ether+0.0014)
+    document.getElementById("radje").innerHTML = bleg.toFixed(5);
+  }
+
+
+var Paypal;
+  function RAD2(){
+
+    Paypal = document.getElementById("radje2").value;
+    Paypal=Paypal-0.35;
+
+    if(Paypal<0.13){
+      Paypal=0
+    }
+    var Radonn = (Paypal/0.13);
+  
+    document.getElementById("ethje2").innerHTML = Radonn.toFixed(0);
+  }
+  function ETHER2(){
+    var radonn=document.getElementById("ethje2").value;
+    var paypal = (radonn*0.13);
+    var i = (paypal+0.35)
+    document.getElementById("radje2").innerHTML = i.toFixed(2);
+  }
+
+
+
+function getEtherwallet(){
+  Etherwallet=document.getElementById("Etherwallet").value
+}
+
+function usdhet(){
+    return document.getElementById("radje2").innerHTML
+}
+
+
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      // This function sets up the details of the transaction, including the amount and line item details.
+      return actions.order.create({
+        reference_id: Etherwallet,
+        description: Etherwallet,
+        purchase_units: [{
+        amount: {
+            value: usdhet(),
+            currency_code: 'USD',
+            breakdown: {
+                        item_total: {value: usdhet(), currency_code: 'USD'}
+                    }
+          },
+          items: [{
+                    name: Etherwallet,
+                    unit_amount: {value: usdhet(), currency_code: 'USD'},
+                    quantity: '1',
+                    category: 'DIGITAL_GOODS'
+                }]
+        }],
+        application_context: {
+          shipping_preference: 'NO_SHIPPING',
+        }
+      });
+    },
+    onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+  }).render('#paypal-button-container');
+
+
+
+var TronPrice = 0.01828362;
+
+function TronToEther(){
+     var ammountRad = document.getElementById("tronEther").value; 
+     var ammountTron = ((ammountRad*0.13)/TronPrice)+(0.25/TronPrice)
+
+
+     document.getElementById("Tron").innerHTML = ammountTron.toFixed(2);
+}
+
+
+
+</script>
+</body>
+</html>
