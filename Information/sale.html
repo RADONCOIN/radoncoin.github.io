@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<style type="text/css">
+  
+  .hiddenoverflow{
+    overflow: hidden;
+  }
+</style>
+
+
+
 <script src="../Scripts/tronlink.js"></script>
 <script src="../Scripts/metamask.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -16,7 +26,7 @@
 	<title>Token Sale - RADON</title>
 	<link rel="stylesheet" type="text/css" href="../Style/main.css">
 </head>
-<body onload="bodyload()">
+<body onload="bodyload();">
 
 <div class="w3-bar w3-white fixed w3-padding-16">
      <a href="../index.html"class="w3-button w3-white">Home</a>
@@ -43,16 +53,17 @@
     <p>The current Phase is Phase 1, what means that you can buy 1 RAD for 0.00055 ETH or 0.13$. </p>
      <button onclick="document.getElementById('id01').style.display='block'; load()" class="w3-button w3-black">Use Ether</button>
      <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Use Paypal</button>
-      <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-black w3-hide">Use Tron</button>
+      <button onclick="document.getElementById('id03').style.display='block'; TronLoad()" class="w3-button w3-black">Use Tron</button>
 
 
 <!-- TRON -->
- <div id="id03" class="w3-modal w3-hide">
+ <div id="id03" class="w3-modal">
     <div class="w3-modal-content">
       <div class="w3-container">
-        <span onclick="document.getElementById('id03').style.display='none'; Tronload()" class="w3-button w3-display-topright">&times;</span>
+        <span onclick="document.getElementById('id03').style.display='none'; " class="w3-button w3-display-topright">&times;</span>
         <b class="w3-xlarge">Buying Radon Phase 1. Tron</b>
         <br>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJlOSmf5RCZmvlys3XqJIzBhO0srAqq11pvHVr4uwabOp4uw/viewform?embedded=true" width="100%" height="574" frameborder="0" marginheight="0" marginwidth="0" class="w3-center hiddenoverflow">Loading…</iframe>
 
   <br>
   <h2><b>Tron to Radon calculator:</b></h2>
@@ -65,19 +76,12 @@
   <p class="w3-input w3-black" id="Tron">Price in Tron</p>
 <br> 
   </form>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJlOSmf5RCZmvlys3XqJIzBhO0srAqq11pvHVr4uwabOp4uw/viewform?embedded=true" width="640" height="574" frameborder="0" marginheight="0" marginwidth="0" class="w3-center">Loading…</iframe>
 
 
-        <p class="w3-center">You must be at least 18 years old to start the transaction. Use the calculator to see the price in USD. Paypal has a fee of 0.35$ for each transaction. <br><br>
+        <p class="w3-center" id="textNoTron">You must be at least 18 years old to start the transaction. Use the calculator to see the price in TRON. <br>You don't have tronlink installed for easier payments. So you will have to fill in the form and send the corresponding Tron to:  <b>TFh1yJ2i9dbjZKuKkEEj8SvYyZd3CmRKfT</b><br><br>
         Our system processes transactions every 15 hours. </p>
         <br><br>
-             <div class="w3-container w3-center w3-hide" id="TronLink">
-          <b><p id="askmeta" class="w3-red">You have a Tron-Provider installed, do you wish to connect for easier payments?</p>
-            <button onclick="connectTron()" class="w3-btn w3-hide w3-black" id="tronButtonYes">Yes</button>
-
-
-        </div>
-
+        
 
       </div>
     </div>
