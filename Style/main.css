@@ -52,6 +52,16 @@ img{
   background-position: center;
   background-size: cover;
 }
+.backgroundAbout{
+  background-image: url('../Image/AboutBG.png');
+  background-color: blue;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+
+}
 
 
 .rounded{
