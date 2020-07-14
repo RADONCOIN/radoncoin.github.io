@@ -1,50 +1,62 @@
-html, body {
-          -webkit-transition: .3s ease-in-out;
+html,
+body {
+  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   scroll-behavior: smooth;
 }
 
-.fixed{
+.fixed {
   position: fixed;
   z-index: 999;
 }
 
 ::selection {
-  background: #db5a6c; /* WebKit/Blink Browsers */
+  background: #db5a6c;
+  /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
-  background: #db5a6c; /* Gecko Browsers */
+  background: #db5a6c;
+  /* Gecko Browsers */
 }
+
 .typewriter p {
- /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
-    typing 3s steps(30, end),
-    blink-caret 1s step-end infinite;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  animation: typing 3s steps(30, end), blink-caret 1s step-end infinite;
 }
+
 
 /* The typing effect */
 
 
 /* The typewriter cursor effect */
+
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black }
-}
-.imgcollor{
-background-color: #db5a6c;
+  from,
+  to {
+    border-color: transparent
+  }
+  50% {
+    border-color: black
+  }
 }
 
+.imgcollor {
+  background-color: #db5a6c;
+}
 
-img{
-    -webkit-transition: .3s ease-in-out;
+img {
+  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-
-.background1{
+.background1 {
   background-image: url('../Image/background.png');
   background-color: blue;
   background-repeat: no-repeat;
@@ -52,84 +64,86 @@ img{
   background-position: center;
   background-size: cover;
 }
-.backgroundAbout{
+
+.backgroundAbout {
   background-image: url('../Image/AboutBG.png');
   background-color: blue;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-
-
 }
 
-
-.rounded{
+.rounded {
   border-radius: 25px;
 }
-.white{
+
+.white {
   color: white;
 }
 
-.red{
- color: #db5a6c;
+.red {
+  color: #db5a6c;
 }
 
-.bordercolor{
+.bordercolor {
   border-color: black;
-
 }
 
-.spin{
+.spin {
   -webkit-animation-name: spin;
-    -webkit-animation-duration: 60000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-
-    -moz-animation-name: spin;
-    -moz-animation-duration: 60000ms;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-
-    -ms-animation-name: spin;
-    -ms-animation-duration: 60000ms;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: linear;
-
-    animation-name: spin;
-    animation-duration: 60000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-    @-ms-keyframes spin { 
-        from { 
-            -ms-transform: rotate(0deg); 
-        } to { 
-            -ms-transform: rotate(360deg); 
-        }
-    }
-    @-moz-keyframes spin { 
-        from { 
-            -moz-transform: rotate(0deg); 
-        } to { 
-            -moz-transform: rotate(360deg); 
-        }
-    }
-    @-webkit-keyframes spin { 
-        from { 
-            -webkit-transform: rotate(0deg); 
-        } to { 
-            -webkit-transform: rotate(360deg); 
-        }
-    }
-    @keyframes spin { 
-        from { 
-            transform: rotate(0deg); 
-        } to { 
-            transform: rotate(360deg); 
-        }
-    }
-
+  -webkit-animation-duration: 60000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 60000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 60000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 60000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
 
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+}
