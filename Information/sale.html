@@ -18,7 +18,7 @@
       <title>Token Sale - RADON</title>
       <link rel="stylesheet" type="text/css" href="../Style/main.css">
    </head>
-   <body onload="bodyload();">
+   <body onload="bodyload();" id="oro">
       <div class="w3-bar w3-white fixed w3-padding-16">
          <a href="../index.html"class="w3-button w3-white">Home</a>
          <a href="about.html" class="w3-button w3-white">About & Contact</a>
@@ -41,7 +41,7 @@
                <button onclick="document.getElementById('id03').style.display='block'; TronLoad()" class="w3-button w3-black">Use Tron</button>
                <button onclick="document.getElementById('id04').style.display='block';" class="w3-button w3-black">Use Bitcoin</button>
                <!-- BTC -->
-               <div id="id04" class="w3-modal">
+               <div id="id04" class="w3-modal" onsubmit="BitcoinToEther()">
                   <div class="w3-modal-content">
                      <div class="w3-container">
                         <span onclick="document.getElementById('id04').style.display='none'; " class="w3-button w3-display-topright">&times;</span>
@@ -51,10 +51,11 @@
                         <br>
                         <h2><b>Bitcoin to Radon calculator:</b></h2>
                         <br><br>
-                        <form class="w3-container">
+                        <form class="w3-container" onsubmit="BitcoinToEther()">
                            <label>How much Radon do you want to buy:</label>
-                           <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="BitcoinToEther()" id="BitcoinEther">
+                           <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="BitcoinToEther()" id="BitcoinEther" onsubmit="BitcoinToEther()">
                            <br>
+                                    <input onsubmit="getEtherwallet()" class="w3-input w3-black w3-hide" placeholder="0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f" type="text" onchange="getEtherwallet()" id="Etherwallet">
                            <label>The Bitcoin you send: (including 1.25$ fee)</label>
                            <p class="w3-input w3-black" id="Btc">Price in BTC</p>
                            <br> 
@@ -86,8 +87,9 @@
                         <br><br>
                         <form class="w3-container">
                            <label>How much Radon do you want to buy:</label>
-                           <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="TronToEther()" id="tronEther">
+                           <input onsubmit="TronToEther()" class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="TronToEther()" id="tronEther">
                            <br>
+                           <input onsubmit="getEtherwallet()" class="w3-input w3-black w3-hide" placeholder="0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f" type="text" onchange="getEtherwallet()" id="Etherwallet">
                            <label>The Tron you send: (including 0.25$ fee)</label>
                            <p class="w3-input w3-black" id="Tron">Price in Tron</p>
                            <br> 
@@ -114,13 +116,13 @@
                         <br><br>
                         <form class="w3-container">
                            <label>How much Radon do you want to buy:</label>
-                           <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="ETHER2()" id="ethje2">
+                           <input onsubmit="ETHER2()" class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="ETHER2()" id="ethje2">
                            <br>
                            <label>The USD you send:</label>
                            <p class="w3-input w3-black" id="radje2">Price in USD</p>
                            <br>
                            <label>Your Ether/ERC-20 Token Adress:</label>
-                           <input class="w3-input w3-black" placeholder="0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f" type="text" onchange="getEtherwallet()" id="Etherwallet">
+                           <input onsubmit="getEtherwallet()" class="w3-input w3-black" placeholder="0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f" type="text" onchange="getEtherwallet()" id="Etherwallet">
                         </form>
                         <p class="w3-center">You must be at least 18 years old to start the transaction. Use the calculator to see the price in USD. Paypal has a fee of 0.35$ for each transaction. <br><br>
                            Our system processes transactions every 15 hours. 
@@ -143,8 +145,9 @@
                            <br><br>
                            <form class="w3-container">
                               <label>The Radon you receive:</label>
-                              <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="0"onchange="ETHER()" id="ethje">
+                              <input onsubmit="ETHER()" class="w3-input w3-black" type="number" min="1" step="1" placeholder="0"onchange="ETHER()" id="ethje">
                               <br>
+                              <input onsubmit="getEtherwallet()" class="w3-input w3-black w3-hide" placeholder="0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f" type="text" onchange="getEtherwallet()" id="Etherwallet">
                               <label>The Ether you send (including blockchain fee):</label>
                               <p class="w3-input w3-black"id="radje">0</p>
                               <br>
@@ -278,6 +281,16 @@
          
             document.getElementById("Btc").innerHTML = ammountTron.toFixed(9);
          }
+
+var input = document.getElementById("id04")
+     input.addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+
+      }
+    });
          
       </script>
    </body>
