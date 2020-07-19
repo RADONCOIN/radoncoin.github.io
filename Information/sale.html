@@ -39,6 +39,40 @@
                <button onclick="document.getElementById('id01').style.display='block'; load()" class="w3-button w3-black">Use Ether</button>
                <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Use Paypal</button>
                <button onclick="document.getElementById('id03').style.display='block'; TronLoad()" class="w3-button w3-black">Use Tron</button>
+               <button onclick="document.getElementById('id04').style.display='block';" class="w3-button w3-black">Use Bitcoin</button>
+               <!-- BTC -->
+               <div id="id04" class="w3-modal">
+                  <div class="w3-modal-content">
+                     <div class="w3-container">
+                        <span onclick="document.getElementById('id04').style.display='none'; " class="w3-button w3-display-topright">&times;</span>
+                        <b class="w3-xlarge">Buying Radon Phase 1. Bitcoin (high fee)</b>
+
+                   
+                        <br>
+                        <h2><b>Bitcoin to Radon calculator:</b></h2>
+                        <br><br>
+                        <form class="w3-container">
+                           <label>How much Radon do you want to buy:</label>
+                           <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="BitcoinToEther()" id="BitcoinEther">
+                           <br>
+                           <label>The Bitcoin you send: (including 1.25$ fee)</label>
+                           <p class="w3-input w3-black" id="Btc">Price in BTC</p>
+                           <br> 
+                        </form>
+                        <p class="w3-center" id="textNoTron">You must be at least 18 years old to start the transaction. Use the calculator to see the price in BTC. <br>You will have to <b>fill in the form below </b> and send the corresponding BTC to:  <b>12noSGvGmUFj9s1otL8g5dDpz4LQ99MvvA</b><br><br>
+                           Our system processes transactions every 15 hours. 
+                        </p>
+
+                             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScdprl-HBoTHECAXWg0EcSpol8mtW9V2kGj3ESBq4m6kFokGw/viewform?embedded=true" width="100%" height="574" frameborder="0" marginheight="0" marginwidth="0"  class="w3-center hiddenoverflow">Loading…</iframe>
+                        <br><br>
+                     </div>
+                  </div>
+               </div>
+
+
+
+
+
                <!-- TRON -->
                <div id="id03" class="w3-modal">
                   <div class="w3-modal-content">
@@ -225,7 +259,7 @@
          
          
          
-         var TronPrice = 0.01828362;
+         var TronPrice = 0.01724285;
          
          function TronToEther(){
             var ammountRad = document.getElementById("tronEther").value; 
@@ -235,7 +269,15 @@
             document.getElementById("Tron").innerHTML = ammountTron.toFixed(2);
          }
          
+         var BitcoinPrice = 9153.30;
          
+         function BitcoinToEther(){
+            var ammountRad = document.getElementById("BitcoinEther").value; 
+            var ammountTron = ((ammountRad*0.13)/BitcoinPrice)+(1.25/BitcoinPrice)
+         
+         
+            document.getElementById("Btc").innerHTML = ammountTron.toFixed(9);
+         }
          
       </script>
    </body>
