@@ -10,6 +10,7 @@
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" type="text/css" href="Style/main.css">
       <title>RadonCOIN</title>
+      <script type="text/javascript" src="Scripts/getEtherPrice.js"></script>
       <script type="text/javascript" src="Scripts/metamask.js"></script>
    </head>
    <body onload="bodyload()" class="">
@@ -86,121 +87,121 @@
                <tr>
                   <td>Phase 1</td>
                   <td>380000 RAD</td>
-                  <td>0.00055 ETH</td>
+                  <td id="phase1">0.00055 ETH</td>
                   <td>0.13 USD</td>
                </tr>
                <tr>
                   <td>Phase 2</td>
                   <td>760000 RAD</td>
-                  <td>0.00110 ETH</td>
+                  <td id="phase2">0.00110 ETH</td>
                   <td>0.26 USD</td>
                </tr>
                <tr>
                   <td>Phase 3</td>
                   <td>1114000 RAD</td>
-                  <td>0.00165 ETH</td>
+                  <td id="phase3">0.00165 ETH</td>
                   <td>0.39 USD</td>
                </tr>
                <tr>
                   <td>Phase 4</td>
                   <td>1520000 RAD</td>
-                  <td>0.00220 ETH</td>
+                  <td id="phase4">0.00220 ETH</td>
                   <td>0.52 USD</td>
                </tr>
                <tr>
                   <td>Phase 5</td>
                   <td>1900000 RAD</td>
-                  <td>0.00275 ETH</td>
+                  <td id="phase5">0.00275 ETH</td>
                   <td>0.65 USD</td>
                </tr>
                <tr>
                   <td>Phase 6</td>
                   <td>2280000 RAD</td>
-                  <td>0.00330 ETH</td>
+                  <td id="phase6">0.00330 ETH</td>
                   <td>0.78 USD</td>
                </tr>
                <tr>
                   <td>Phase 7</td>
                   <td>2660000 RAD</td>
-                  <td>0.00385 ETH</td>
+                  <td id="phase7">0.00385 ETH</td>
                   <td>0.91 USD</td>
                </tr>
                <tr>
                   <td>Phase 8</td>
                   <td>3040000 RAD</td>
-                  <td>0.00440 ETH</td>
+                  <td id="phase8">0.00440 ETH</td>
                   <td>1.04 USD</td>
                </tr>
                <tr>
                   <td>Phase 9</td>
                   <td>3420000 RAD</td>
-                  <td>0.00495 ETH</td>
+                  <td id="phase9">0.00495 ETH</td>
                   <td>1.17 USD</td>
                </tr>
                <tr>
                   <td>Phase 10</td>
                   <td>3800000 RAD</td>
-                  <td>0.00550 ETH</td>
+                  <td id="phase10">0.00550 ETH</td>
                   <td>1.30 USD</td>
                </tr>
                <tr>
                   <td>Phase 11</td>
                   <td>4180000 RAD</td>
-                  <td>0.00605 ETH</td>
+                  <td id="phase11">0.00605 ETH</td>
                   <td>1.43 USD</td>
                </tr>
                <tr>
                   <td>Phase 12</td>
                   <td>4560000 RAD</td>
-                  <td>0.00660 ETH</td>
+                  <td id="phase12">0.00660 ETH</td>
                   <td>1.56 USD</td>
                </tr>
                <tr>
                   <td>Phase 13</td>
                   <td>4940000 RAD</td>
-                  <td>0.00715 ETH</td>
+                  <td id="phase13">0.00715 ETH</td>
                   <td>1.69 USD</td>
                </tr>
                <tr>
                   <td>Phase 14</td>
                   <td>5320000 RAD</td>
-                  <td>0.00770 ETH</td>
+                  <td id="phase14">0.00770 ETH</td>
                   <td>1.82 USD</td>
                </tr>
                <tr>
                   <td>Phase 15</td>
                   <td>5700000 RAD</td>
-                  <td>0.00825 ETH</td>
+                  <td id="phase15">0.00825 ETH</td>
                   <td>1.95 USD</td>
                </tr>
                <tr>
                   <td>Phase 16</td>
                   <td>6080000 RAD</td>
-                  <td>0.00880 ETH</td>
+                  <td id="phase16">0.00880 ETH</td>
                   <td>2.08 USD</td>
                </tr>
                <tr>
                   <td>Phase 17</td>
                   <td>6460000 RAD</td>
-                  <td>0.00935 ETH</td>
+                  <td id="phase17">0.00935 ETH</td>
                   <td>2.21 USD</td>
                </tr>
                <tr>
                   <td>Phase 18</td>
                   <td>6840000 RAD</td>
-                  <td>0.00990 ETH</td>
+                  <td id="phase18">0.00990 ETH</td>
                   <td>2.34 USD</td>
                </tr>
                <tr>
                   <td>Phase 19</td>
                   <td>7220000 RAD</td>
-                  <td>0.01045 ETH</td>
+                  <td id="phase19">0.01045 ETH</td>
                   <td>2.47 USD</td>
                </tr>
                <tr>
                   <td>Phase 20</td>
                   <td>7800000 RAD</td>
-                  <td>0.01100 ETH</td>
+                  <td id="phase20">0.01100 ETH</td>
                   <td>2.60 USD</td>
                </tr>
                <tr>
@@ -284,96 +285,6 @@
 
       <br>
       <br>
-      <script type="text/javascript">
-         //https://www.youtube.com/watch?v=ZQVweC72qJI
-         var Etherwallet = "";
-         
-         function RAD(){
-         
-          var Ether = document.getElementById("radje").value;
-          Ether=Ether-0.0014
-         
-          if(Ether<0.00055){
-            Ether=0
-          }
-          var Radon = (Ether/0.00055);
-          document.getElementById("ethje").value = Math.floor(Radon);
-         }
-          var bleg;
-         function ETHER(){
-          var radon=document.getElementById("ethje").value;
-          var ether = (radon*0.00055);
-            bleg = (ether+0.0014)
-          document.getElementById("radje").innerHTML = bleg.toFixed(5);
-         }
-         
-         
-         var Paypal;
-         function RAD2(){
-         
-          Paypal = document.getElementById("radje2").value;
-          Paypal=Paypal-0.35;
-         
-          if(Paypal<0.13){
-            Paypal=0
-          }
-          var Radonn = (Paypal/0.13);
-         
-          document.getElementById("ethje2").innerHTML = Radonn.toFixed(0);
-         }
-         function ETHER2(){
-          var radonn=document.getElementById("ethje2").value;
-          var paypal = (radonn*0.13);
-          var i = (paypal+0.35)
-          document.getElementById("radje2").innerHTML = i.toFixed(2);
-         }
-         
-         
-         
-         function getEtherwallet(){
-         Etherwallet=document.getElementById("Etherwallet").value
-         }
-         
-         function usdhet(){
-           return document.getElementById("radje2").innerHTML
-         }
-         
-         
-         paypal.Buttons({
-            createOrder: function(data, actions) {
-              // This function sets up the details of the transaction, including the amount and line item details.
-              return actions.order.create({
-                reference_id: Etherwallet,
-                description: Etherwallet,
-                purchase_units: [{
-                amount: {
-                    value: usdhet(),
-                    currency_code: 'USD',
-                    breakdown: {
-                                item_total: {value: usdhet(), currency_code: 'USD'}
-                            }
-                  },
-                  items: [{
-                            name: Etherwallet,
-                            unit_amount: {value: usdhet(), currency_code: 'USD'},
-                            quantity: '1',
-                            category: 'DIGITAL_GOODS'
-                        }]
-                }],
-                application_context: {
-                  shipping_preference: 'NO_SHIPPING',
-                }
-              });
-            },
-            onApprove: function(data, actions) {
-                        return actions.order.capture().then(function(details) {
-                            // Show a success message to the buyer
-                            alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                        });
-                    }
-          }).render('#paypal-button-container');
-         
-         
-      </script>
+      
    </body>
 </html>

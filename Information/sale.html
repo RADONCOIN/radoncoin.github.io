@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <style type="text/css">
-         .hiddenoverflow{
-         overflow: hidden;
-         }
-      </style>
-      <script src="../Scripts/tronlink.js"></script>
-      <script src="../Scripts/metamask.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-      <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script
-         src="https://www.paypal.com/sdk/js?client-id=AbRMcLvvrR7MrVvF4BIKeraXcBJz_QpS2ewQrd3MEm7LpNEe9mLb7ceXNQ6ffzGSVOlwt7hLhwIrzjy1"></script>
+   <head>  
+    <script type="text/javascript" src="../Scripts/getEtherPrice.js"></script>
+    <script src="../Scripts/metamask.js"></script>
+           
+    
+      <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+      <link defer href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+      <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <title>Token Sale - RADON</title>
       <link rel="stylesheet" type="text/css" href="../Style/main.css">
    </head>
    <body onload="bodyload();" id="oro">
+ <script defer
+         src="https://www.paypal.com/sdk/js?client-id=AbRMcLvvrR7MrVvF4BIKeraXcBJz_QpS2ewQrd3MEm7LpNEe9mLb7ceXNQ6ffzGSVOlwt7hLhwIrzjy1"></script>
+
+
       <div class="w3-bar w3-white fixed w3-padding-16">
          <a href="../index.html"class="w3-button w3-white">Home</a>
          <a href="about.html" class="w3-button w3-white">About & Contact</a>
@@ -34,12 +34,58 @@
          <h2 class="w3-xxlarge w3-center" id="howbuy"><b>Get Radon Now!</b></h2>
          <br><br>
          <div class="w3-row ">
-            <div class="w3-container " id="buy">
+          <div id="loading" class="w3-container w3-center">          <div class="loadingio-spinner-pulse-rc9re3ykxo"><div class="ldio-g8p5rl69n0j">
+<div></div><div></div><div></div>
+</div></div>
+<style type="text/css">
+@keyframes ldio-g8p5rl69n0j-1 { 0% { top: 36px; height: 128px } 50% { top: 60px; height: 80px } 100% { top: 60px; height: 80px } } @keyframes ldio-g8p5rl69n0j-2 { 0% { top: 41.99999999999999px; height: 116.00000000000001px } 50% { top: 60px; height: 80px } 100% { top: 60px; height: 80px } } @keyframes ldio-g8p5rl69n0j-3 { 0% { top: 48px; height: 104px } 50% { top: 60px; height: 80px } 100% { top: 60px; height: 80px } } .ldio-g8p5rl69n0j div { position: absolute; width: 30px }.ldio-g8p5rl69n0j div:nth-child(1) { left: 35px; background: #e15b64; animation: ldio-g8p5rl69n0j-1 1s cubic-bezier(0,0.5,0.5,1) infinite; animation-delay: -0.2s } .ldio-g8p5rl69n0j div:nth-child(2) { left: 85px; background: #f8b26a; animation: ldio-g8p5rl69n0j-2 1s cubic-bezier(0,0.5,0.5,1) infinite; animation-delay: -0.1s } .ldio-g8p5rl69n0j div:nth-child(3) { left: 135px; background: #abbd81; animation: ldio-g8p5rl69n0j-3 1s cubic-bezier(0,0.5,0.5,1) infinite; animation-delay: undefineds } .loadingio-spinner-pulse-rc9re3ykxo { width: 200px; height: 200px; display: inline-block; overflow: hidden; background: #ffffff; } .ldio-g8p5rl69n0j { width: 100%; height: 100%; position: relative; transform:translateZ(0) scale(1); backface-visibility: hidden; transform-origin: 0 0; /* see note above */ } .ldio-g8p5rl69n0j div { box-sizing: content-box; }
+
+</style>
+          <h1 class="w3-jumbo">Loading Payment Options ~5s</h1></div>
+
+            <div class="w3-container w3-hide" id="buy">
                <p>The current Phase is Phase 1, what means that you can buy 1 RAD for 0.00055 ETH or 0.13$. </p>
-               <button onclick="document.getElementById('id01').style.display='block'; load()" class="w3-button w3-black">Use Ether</button>
+               <button onclick="document.getElementById('id01').style.display='block'; load()" class="w3-button w3-black ">Use Ether</button>
                <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Use Paypal</button>
                <button onclick="document.getElementById('id03').style.display='block'; TronLoad()" class="w3-button w3-black">Use Tron</button>
                <button onclick="document.getElementById('id04').style.display='block';" class="w3-button w3-black">Use Bitcoin</button>
+            <!--    <button onclick="document.getElementById('id05').style.display='block';" class="w3-button w3-black">Use Bitcoin Cash</button> -->
+ <!-- BTC Cash -->
+               <div id="id05" class="w3-modal" onsubmit="BitcoinToEther()">
+                  <div class="w3-modal-content">
+                     <div class="w3-container">
+                        <span onclick="document.getElementById('id04').style.display='none'; " class="w3-button w3-display-topright">&times;</span>
+                        <b class="w3-xlarge">Buying Radon Phase 1. Bitcoin Cash</b>
+
+                   
+                        <br>
+                        <h2><b>Bitcoin Cash to Radon calculator:</b></h2>
+                        <br><br>
+                        <form class="w3-container" onsubmit="BitcoinToEther()">
+                           <label>How much Radon do you want to buy:</label>
+                           <input class="w3-input w3-black" type="number" min="1" step="1" placeholder="7"onchange="BitcoinToEther()" id="BitcoinEther" onsubmit="BitcoinToEther()">
+                           <br>
+                           <input onsubmit="getEtherwallet()" class="w3-input w3-black w3-hide" placeholder="0x00555F4f4D0b1dBCD20F0fBc791efd7C88BFa76f" type="text" onchange="getEtherwallet()" id="Etherwallet">
+                           <label>The Bitcoin Cash you send: (0$ fee)</label>
+                           <p class="w3-input w3-black" id="Btc">Price in Bitcoin Cash</p>
+                           <br> 
+                        </form>
+                        <p class="w3-center" id="textNoTron">You must be at least 18 years old to start the transaction. Use the calculator to see the price in Bitcoin Cash. <br>You will have to <b>fill in the form below </b> and send the corresponding Bitcoin Cash to:  
+                          <b>qpar9pun20zmz5ufjxqvgt4nv57ucxscdqr336h6kf</b><br><br>
+                           Our system processes transactions every 15 hours. 
+                        </p>
+
+                             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScdprl-HBoTHECAXWg0EcSpol8mtW9V2kGj3ESBq4m6kFokGw/viewform?embedded=true" width="100%" height="574" frameborder="0" marginheight="0" marginwidth="0"  class="w3-center hiddenoverflow">Loading…</iframe>
+                        <br><br>
+                     </div>
+                  </div>
+               </div>
+
+
+
+
+
+
                <!-- BTC -->
                <div id="id04" class="w3-modal" onsubmit="BitcoinToEther()">
                   <div class="w3-modal-content">
@@ -174,22 +220,22 @@
       <script type="text/javascript">
          //https://www.youtube.com/watch?v=ZQVweC72qJI
          var Etherwallet = "";
-         
+
          function RAD(){
          
            var Ether = document.getElementById("radje").value;
            Ether=Ether-0.0014
          
-           if(Ether<0.00055){
+           if(Ether< (0.13/RealEtherPrice)){
              Ether=0
            }
-           var Radon = (Ether/0.00055);
+           var Radon = (Ether/ (0.13/RealEtherPrice));
            document.getElementById("ethje").value = Math.floor(Radon);
          }
          var bleg;
          function ETHER(){
            var radon=document.getElementById("ethje").value;
-           var ether = (radon*0.00055);
+           var ether = (radon* (0.13/RealEtherPrice));
            bleg = (ether+0.0014)
            document.getElementById("radje").innerHTML = bleg.toFixed(5);
          }

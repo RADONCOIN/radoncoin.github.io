@@ -1,5 +1,8 @@
 function bodyload(){
 $("#paynoweth").hide()
+getEtherPrice()
+$("#buy").removeClass("w3-hide")
+$("#loading").addClass("w3-hide")
 }
 
 function load() {
